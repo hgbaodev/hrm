@@ -589,6 +589,7 @@ public class access_NHANVIEN {
 
             while (rs.next()) {
                 ten = rs.getString("maNhanVien") + " - " + rs.getString("hoTen");
+            	System.out.println("https://github.com/hgbaodev");
             }
 
             connection.closeConnection(con);

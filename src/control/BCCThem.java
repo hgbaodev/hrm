@@ -32,7 +32,6 @@ public class BCCThem implements MouseListener {
         app.getData().getDanhSachBangChamCong();
         BangChamCongForm2_1 temp = app.getContent().getBangChamCongForm().getForm2();
         int row= temp.getObjectTable().getSelectedRow();
-        System.out.println(temp.getObjectTable().getValueAt(row, 1).toString());
         if(temp.getObjectTable().getValueAt(row, 2).toString().equals("Đã chấm công")) {
         	JOptionPane.showMessageDialog(temp,"Nhân viên "+ temp.getObjectTable().getValueAt(row, 1).toString()+temp.getThang().getSelectedItem()+"/"+temp.getNam().getSelectedItem()+" đã được chấm công!! Vui lòng chọn nhân viên khác");
         }
@@ -80,7 +79,6 @@ public class BCCThem implements MouseListener {
             	}
             	o++;
             }
-            System.out.println("///"+app.getContent().getBangChamCongForm().getForm3().getArr_1().size());
             // Them vao list
             BANGCHAMCONG them = new BANGCHAMCONG(maBCC, maNV, thang, nam, soNgayLam, soNgayNghi, soNgayTre, soGioLamThem,chiTiet,"");
             
@@ -108,7 +106,6 @@ public class BCCThem implements MouseListener {
     public void reset() {
     	BangChamCongForm2_1 temp= app.getContent().getBangChamCongForm().getForm2();
     	for(JLabel i: temp.getArr_1()) {
-    		System.out.println("Reset");
     		i.setBackground(Color.white);
     		i.setText("");
     	}

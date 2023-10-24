@@ -58,9 +58,6 @@ public class myMenuBar2 extends JPanel{
 		ima.setBorderSize(2);
 		this.add(ima);
 		
-		
-		
-		
 		JPanel panelName = new JPanel();
 		panelName.setLayout(new BorderLayout());
 		panelName.setBackground(new Color(0,0,0,0));

@@ -22,7 +22,6 @@ public class clickTableTangLuong implements MouseListener{
 	}
 	@Override
 	public void mouseClicked(MouseEvent e) {
-		System.out.println("You have clicked!");
 		SalaryForm4 form4 = app.getContent().getSalaryForm().getSalaryForm4();
 		int selected_pos = form4.getTable().getSelectedRow();
 		String value[] = form4.getTable().getValueAt(selected_pos, 1).toString().split(" - ");

@@ -18,7 +18,6 @@ public class chinhSuaNhomQuyen extends MouseAdapter{
 	}
 	public void mouseClicked(MouseEvent e) {
 		AccountForm temp = app.getContent().getAccountForm();
-		System.out.println("Chỉnh sửa  nhóm quyền");
 		if(temp.getTitleNhomQuyen().getText().equals("")) {
 			app.showMessage("Vui lòng chọn nhóm quyền!");
 		}

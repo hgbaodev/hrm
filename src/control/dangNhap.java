@@ -16,7 +16,6 @@ public class dangNhap extends MouseAdapter{
 	public void mouseClicked(MouseEvent e) {
 		System.out.println("Đăng nhập");
 		String arr[]= r.getLogin().getData();
-		System.out.println(arr[0]+"  ->   "+arr[1]);
 		ArrayList<TAIKHOAN> danhSachTaiKhoan = access_TAIKHOAN.getList();
 		for(TAIKHOAN i : danhSachTaiKhoan) {
 			if(i.getUsername().equals(arr[0])) {

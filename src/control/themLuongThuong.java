@@ -18,9 +18,6 @@ public class themLuongThuong extends MouseAdapter{
 		System.out.println("thưởng");
 		SalaryForm2 temp = app.getContent().getSalaryForm().getSalaryForm2();
 		String data[] = temp.getDataThemLuongThuong();
-		for(int i=0;i<data.length;i++) {
-			System.out.println(data[i]);
-		}
 		// kiểm tra dữ liệu
 		int nam;
 		try {

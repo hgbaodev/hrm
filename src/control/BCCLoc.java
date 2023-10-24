@@ -34,7 +34,6 @@ public class BCCLoc implements ActionListener {
         
         
         if (tenPB.equalsIgnoreCase("Phòng ban")) {
-        	System.out.println(1);
             danhSachLoc = app.getData().getDanhSachBangChamCong();
         	check=false;
         } else {

@@ -311,11 +311,6 @@ public class access_PHONGBAN {
 						k++;
 					}
 				}
-				System.out.println("data");
-				for(int i=0;i<data2.length;i++) {
-					System.out.println(data2[i]);
-				}
-				System.out.println("end data");
 				return data2;
 			}
 			

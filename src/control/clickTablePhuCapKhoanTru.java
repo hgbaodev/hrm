@@ -21,7 +21,6 @@ public class clickTablePhuCapKhoanTru implements MouseListener{
 	}
 	@Override
 	public void mouseClicked(MouseEvent e) {
-		System.out.println("You have clicked!");
 		SalaryForm3 form3 = app.getContent().getSalaryForm().getSalaryForm3();
 		int selected_pos = form3.getTable().getSelectedRow();
 		String value[] = form3.getTable().getValueAt(selected_pos, 1).toString().split(" - ");
@@ -29,7 +28,6 @@ public class clickTablePhuCapKhoanTru implements MouseListener{
 		form3.getTfMaNhanVienTru().setText(value[0]);
 		form3.getTfMaNhanVienPhuCap().setText(value[0]);
 		LocalDate date = LocalDate.now();
-		System.out.println(Integer.valueOf(date.getYear() - Integer.valueOf(value_time[1]) + 1));
 		form3.getCbbNamPhuCap().setSelectedIndex(Integer.valueOf(date.getYear() - Integer.valueOf(value_time[1]) + 1));
 		form3.getCbbNamTru().setSelectedIndex(Integer.valueOf(date.getYear() - Integer.valueOf(value_time[1]) + 1));
 		form3.getCbbThangPhuCap().setSelectedIndex(Integer.valueOf(value_time[0]));

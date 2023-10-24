@@ -23,7 +23,6 @@ public class BCCXoa implements MouseListener {
     public void mouseClicked(MouseEvent e) {
         int index = app.getContent().getBangChamCongForm().getForm1().getTable().getSelectedRow();
         String column1 = app.getContent().getBangChamCongForm().getForm1().getModel().getValueAt(index, 1).toString().trim();
-        System.out.println(column1);
         int res = app.showOption("Bạn có chắc xóa bảng chấm công "+column1+" không?");
         if(res==0) {
         	access_LUONG.deleteLUONG("L"+column1.substring(3));

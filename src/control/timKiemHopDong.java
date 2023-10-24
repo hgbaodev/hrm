@@ -42,7 +42,6 @@ public class timKiemHopDong implements KeyListener{
 	
 	@Override
 	public void keyReleased(KeyEvent e) {
-		System.out.println(index);
 		index++;
 		// TODO Auto-generated method stub
 		DANHSACHHOPDONG danhSachTimKiem = find(app,locHopDong.filter(app));

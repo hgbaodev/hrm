@@ -25,7 +25,6 @@ public class xacNhanDoiMatKhau extends MouseAdapter{
 			return;
 		}
 		String taiKhoan = dangNhap.getPanelDoiMatKhau().getTaiKhoan();
-		System.out.println("Tài khoản: "+taiKhoan);
 		if(taiKhoan.endsWith("gmail.com")) {
 			access_TAIKHOAN.updatePassword(access_TAIKHOAN.getUsername(taiKhoan), matKhauMoi);
 		}else {

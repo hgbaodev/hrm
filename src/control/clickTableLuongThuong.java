@@ -17,12 +17,10 @@ public class clickTableLuongThuong implements MouseListener{
 	}
 	@Override
 	public void mouseClicked(MouseEvent e) {
-		System.out.println("You have clicked!");
 		SalaryForm2 form2 = app.getContent().getSalaryForm().getSalaryForm2();
 		if(form2.getCbbDonVi().getSelectedIndex()==2) {
 			int selected_pos = form2.getObjectTable().getSelectedRow();
 			String value[] = form2.getObjectTable().getValueAt(selected_pos, 1).toString().split(" - ");
-			System.out.println(value);
 			form2.getTfMaNhanVienThuong().setText(value[0]);
 		}
 		

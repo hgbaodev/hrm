@@ -26,7 +26,6 @@ public class Login_Key implements KeyListener {
 		}
 //		try {
 			char c= e.getKeyChar();
-			System.out.println(c);
 			// xóa
 	        if(e.getKeyCode()==8 || e.getKeyCode()== 127) {
 	        	dem--;
