@@ -49,5 +49,4 @@ public class run {
 	public App getApp() {
 		return this.frame;
 	}
-//	1,000,000.546
 }
