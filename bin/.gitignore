@@ -1,3 +1,17 @@
+/BUS/
+/DAO/
+/DTO/
+/GUI/
+/TimingFramework-0.55.jar
+/activation-1.1.jar
+/assets/
+/common-image-3.9.4.jar
+/connection_database/
+/control/
 /dateChooser/
+/datechooser.jar
+/javax.mail.jar
+/module-info.class
 /run/
+/sqljdbc4.jar
 /view/
