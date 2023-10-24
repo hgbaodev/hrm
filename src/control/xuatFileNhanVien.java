@@ -1,0 +1,54 @@
+package control;
+
+import java.awt.Color;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.io.File;
+
+
+import javax.swing.JFileChooser;
+import javax.swing.UIManager;
+import javax.swing.filechooser.FileFilter;
+
+import DTO.EXCEL;
+import run.App;
+
+public class xuatFileNhanVien extends MouseAdapter{
+	private App app;
+	public xuatFileNhanVien(App app) {
+		this.app = app;
+	}
+	public void mouseClicked(MouseEvent e) {
+		JFileChooser jf = new JFileChooser();
+	
+		jf.setFileFilter(new FileFilter() {
+			public String getDescription() {
+				// TODO Auto-generated method stub
+				return "Excel file";
+			}
+			public boolean accept(File f) {
+				// TODO Auto-generated method stub
+				String name = f.getName();
+				return f.isDirectory() || name.endsWith(".xlsx");
+			}
+		});
+		int flag = jf.showOpenDialog(app);
+		if(flag==JFileChooser.APPROVE_OPTION) {
+			File file = jf.getSelectedFile();
+			System.out.println(file.getAbsolutePath());
+			if(file.getAbsoluteFile().toString().endsWith(".xlsx")) {
+				EXCEL.exportEmployeeData(app.getData().getDanhSachNhanVien().getObjectToExportFile(),file.getAbsolutePath());
+			}else {
+				EXCEL.exportEmployeeData(app.getData().getDanhSachNhanVien().getObjectToExportFile(),file.getAbsolutePath().toString()+".xlsx");
+				
+			}
+			app.showMessage("Đã lưu thành công!");
+		}
+	}
+	public void mouseEntered(MouseEvent e) {
+		app.getContent().getEmployeeForm().getEmployeeForm1().getBtnExport().setBackground(Color.decode("#2980b9"));
+	}
+	public void mouseExited(MouseEvent e) {
+		app.getContent().getEmployeeForm().getEmployeeForm1().getBtnExport().setBackground(Color.decode("#3498db"));
+	}
+}
